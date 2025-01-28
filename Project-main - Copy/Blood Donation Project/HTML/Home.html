@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Blood Donate Management System">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML, CSS, JavaScript , Mysql">
+    <meta name="author" content="Sahadat Hossain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Home </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/Home.css">
+</head>
+
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="Home.html" class="logo">রক্তবন্ধু</a>
+
+            <button type class="fas fa-search" name="search_box" id="search-blood-menu" onclick="handleSearchBlood()"> রক্ত  খুঁজুন</button>
+            
+            <a href="Login.html"><button id="login-menu"> login</button></a>
+            <button id="logout-menu" onclick="handleLogout()"> logout</button>
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+
+            <div class="profile" id="header-profile">
+                <img src="../Images/Pic-1.png" alt="">
+                <!-- need to add database -->
+                <h3>Username</h3>
+                <span>Donor</span>
+                <a href="Profile.html" class="btn">Viewprofile</a>
+
+                <div class="flex-btn">
+                    <a href="Login.html" class="option-btn">Login</a>
+                    <a href="Register.html" class="delete-btn">Register</a>
+                </div>
+            </div>
+
+
+        </section>
+
+    </header>
+    <!-- sidebar -->
+    <div class="sidebar">
+
+        <div class="close-sidebar">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="profile" id="sidebar-profile">
+            <img src="../Images/Pic-1.png" alt="">
+            <!-- need to add database -->
+            <h3>Username</h3>
+            <span>Donor</span>
+            <a href="Profile.html" class="btn">Viewprofile</a>
+        </div>
+        <nav class="navbar">
+            <a href="about.html"><i class="fas fa-question"></i><span>About Us</span></a>
+            <a href="contact.html"><i class="fas fa-headset"></i><span>Contact Us</span></a>
+        </nav>
+    </div>
+
+    <!-- sidebar end -->
+    <div class="container1" style="margin-top: 50px; margin-bottom: 50px;">
+        <h1 id="first">Welcome to রক্তবন্ধু</h1>
+        <p class="hd">রক্তবন্ধু রক্তদান প্রজেক্ট হলো একটি স্বেচ্ছাসেবী উদ্যোগ, যা মূলত রক্তদানের মাধ্যমে সমাজে মানবতার সেবা করার লক্ষ্যে পরিচালিত হয়। এই প্রকল্পের মূল উদ্দেশ্য হচ্ছে রক্তদাতাদের একটি শক্তিশালী নেটওয়ার্ক গড়ে তোলা, যাতে প্রয়োজনের সময়ে রক্তের অভাব দূর করা সম্ভব হয়। রক্তবন্ধু প্রজেক্ট সচেতনতা বৃদ্ধি, রক্তদানের গুরুত্ব সম্পর্কে জনগণকে শিক্ষিত করা এবং রক্তদাতাদের উৎসাহিত করার কাজ করে। তারা নিয়মিত রক্তদান ক্যাম্প আয়োজন করে এবং রক্তদাতাদের জন্য বিভিন্ন অনুষ্ঠান ও কার্যক্রম পরিচালনা করে। এর মাধ্যমে সমাজে রক্তদানের সংস্কৃতি উন্নয়ন এবং মানব জীবন রক্ষার কাজ করা হচ্ছে।</p>
+    </div>
+    <hr>
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-bs-ride="true">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="500">
+                <img src="../Images/p5.jpg" class="d-block w-100" alt="Blood Donation Camp 1" width="800px"
+                    height="400px">
+            </div>
+            <div class="carousel-item" data-bs-interval="500">
+                <img src="../Images/p6.jpg" class="d-block w-100" alt="Blood Donation Camp 2" width="800px"
+                    height="400px">
+            </div>
+            <div class="carousel-item" data-bs-interval="500">
+                <img src="../Images/p7.webp" class="d-block w-100" alt="Blood Donation Camp 3" width="800px"
+                    height="400px">
+            </div>
+            <div class="carousel-item" data-bs-interval="500">
+                <img src="../Images/p8.jpeg" class="d-block w-100" alt="Blood Donation Camp 4" width="800px"
+                    height="400px">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <hr>
+    <div>
+        <h1 class="donate">কে কাকে রক্ত দিতে ও নিতে পারবে</h1>
+        <h2 class="nitimala">রক্ত দেওয়ার সময় রক্তের গ্রুপ মিল থাকা জরুরি, কারণ সকল রক্তের গ্রুপ একে অপরের সঙ্গে মিলে না।রক্তদানের জন্য নিচের নীতিগুলো মেনে চলা হয়:</h2>
+        <img src="../Images/d.webp" alt="" class="img">
+    </div>
+    <div class="upokar">
+        <h1 class="sc">রক্ত দেওয়ার উপকারিতা</h1>
+        <h3 class="smc"><span class = "sm">হৃদরোগের ঝুঁকি কমায়:</span>রক্তদান করলে শরীরের অতিরিক্ত আয়রন কমে গিয়ে হৃদরোগের ঝুঁকি হ্রাস পায়।</h3>
+
+        <h3 class="smc"><span class = "sm">ক্যালরি খরচ:</span>রক্ত দেওয়ার মাধ্যমে ক্যালরি কমে, যা ওজন নিয়ন্ত্রণে সহায়তা করে।</h3>
+        
+        <h3 class="smc"><span class = "sm">রক্তচাপ নিয়ন্ত্রণ:</span>নিয়মিত রক্ত দেওয়ার মাধ্যমে রক্তচাপ নিয়ন্ত্রণে রাখতে সহায়তা হয়।</h3>
+
+        <h3 class="smc"><span class = "sm">রক্ত তৈরির প্রক্রিয়া ত্বরান্বিত করে:</span> নতুন রক্তকোষ তৈরি হয়, যা শরীরকে সতেজ রাখে।</h3>
+
+        <h3 class="smc"><span class = "sm">ক্যান্সারের ঝুঁকি কমায়:</span>আয়রন বেশি হলে ক্যান্সারের ঝুঁকি বাড়ে, তাই রক্ত দিলে ঝুঁকি কমে।></h3>
+
+        <h3 class="smc"><span class = "sm">মানসিক তৃপ্তি:</span>রক্ত দেওয়ার মাধ্যমে ক্যালরি কমে, যা ওজন নিয়ন্ত্রণে সহায়তা করে।</h3>
+
+        <h3 class="smc"><span class = "sm">ক্যালরি খরচ:</span>মানুষের জীবন বাঁচানোর মাধ্যমে মানসিক শান্তি ও আত্মতৃপ্তি পাওয়া যায়।</h3>
+
+        <h3 class="smc"><span class = "sm">স্বাস্থ্য পরীক্ষা:</span>রক্ত দেওয়ার আগে স্বাস্থ্যের প্রাথমিক পরীক্ষা হয়ে যায়।</h3>
+    </div>
+    <div class="container1">
+        <center>
+            <h1 id="author">Authors:</h1>
+        </center>
+        <div class="row justify-content-center">
+            <div class="col-md-4 my-4">
+                <div class="card text-center" style="width: 18rem;">
+                    <img src="../Images/hero1.jpg" class="card-img-top" alt="Sahadat">
+                    <div class="card-body">
+                        <h3 class="card-title">Sahadat Hossain</h3>
+                        <p class="card-text">Blood Group: A+</p>
+                        <p class="card-text">No.of Units Blood Donated:2</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#thiru">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="thiru" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Sahadat Hossain</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Blood Group: A+</p>
+                            <p>No.of Units Blood Donated:2</p>
+                            <p>Email: sahadatfahim999@gmail.com</p>
+                            <p>Contact Number: 01859920189</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-4">
+                <div class="card text-center" style="width: 18rem;">
+                    <img src="../Images/hero1.jpg" class="card-img-top" alt="Annapurna">
+                    <div class="card-body">
+                        <h3 class="card-title">Nishad</h3>
+                        <p class="card-text">Blood Group: B+</p>
+                        <p class="card-text">No.of Units Blood Donated:2</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#roja">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="roja" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLabel">Nishad</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Blood Group: B+</p>
+                            <p>No.of Units Blood Donated:2</p>
+                            <p>Email: nishadahmed555@gmail.com</p>
+                            <p>Contact Number: 0189995646</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <ul class="list">
+                    <li><a href="tel:+8801859920189"><i class="fa-solid fa-phone" class="con"></i> 01859920189</a></li>
+                    <li><a href="https://mail.google.com/mail/u/0/?ogbl#inbox?compose=CllgCJlDTMJQbPdcRDRxnkCfwZzjLztKNcnMLtqLqPrfMNXNBZfmtKmgGlTjvKNgJCrzsVClqcL"><i class="fa-solid fa-envelope"></i> sahadatfahim999@gmail.com</a></li>
+                    <li><a href="https://nstu.edu.bd/"><i class="fa-solid fa-location-dot"></i> NSTU</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/profile.php?id=100010935364988"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://wa.me/qr/ENMANXS2WFMXM1"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://t.me/sahadatnstu"><i class="fa-brands fa-telegram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="termsofservice">
+            <a href="term_service.html">Terms of Service</a>
+            <br>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        </div>
+        <div class="bottom-bar">
+            &copy, copyright@2024 by <span>Sahadat Hossain</span> <br>| all rights reserved!
+        </div>
+    </footer>
+    <script src="../Javascript/Home.js"></script>
+    <script src="../Javascript/script.js"></script>
+</body>
+
+
+</html>

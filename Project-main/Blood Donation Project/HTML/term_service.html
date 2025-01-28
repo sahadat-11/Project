@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Blood Donate Management System">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML, CSS, JavaScript , Mysql">
+    <meta name="author" content="Sahadat Hossain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Service </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../CSS/profile.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="../CSS/about.css">
+    <link rel="stylesheet" href="../CSS/service.css">
+</head>
+
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="Home.html" class="logo">BloodFusion</a>
+
+            <button type class="fas fa-search" name="search_box" id="search-blood-menu" onclick="handleSearchBlood()">Search</button>
+            
+            <a href="Login.html"><button id="login-menu"> login</button></a>
+            <button id="logout-menu" onclick="handleLogout()"> logout</button>
+
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <!-- <div id="toggle-btn" class="fas fa-sun"></div> -->
+                <div id="menu-btn" class="fas fa-bars"></div>
+            </div>
+
+            <div class="profile" id="header-profile">
+                <img src="../Images/Pic-1.png" alt="">
+                <!-- need to add database -->
+                <h3>Username</h3>
+                
+                <a href="Profile.html" class="btn">Viewprofile</a>
+
+                <div class="flex-btn">
+                    <a href="Login.html" class="option-btn">Login</a>
+                    <a href="Register.html" class="delete-btn">Register</a>
+                </div>
+            </div>
+
+
+        </section>
+
+    </header>
+    <!-- sidebar -->
+    <div class="sidebar">
+
+        <div class="close-sidebar">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="profile" id="sidebar-profile">
+            <img src="../Images/Pic-1.png" alt="">
+            <!-- need to add database -->
+            <h3>Username</h3>
+            <span>Donor</span>
+            <a href="Profile.html" class="btn">Viewprofile</a>
+        </div>
+        <nav class="navbar">
+            <a href="Home.html"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="about.html"><i class="fas fa-question"></i><span>About Us</span></a>
+            <a href="contact.html"><i class="fas fa-headset"></i><span>Contact Us</span></a> -->
+        </nav>
+    </div>
+
+    <!-- sidebar end -->
+    <div  class="first">
+        <h2>BloodFusion জন্য একটি সাধারণ Terms of Service (ToS) বা সেবা শর্তাবলি তৈরি করার সময় কিছু গুরুত্বপূর্ণ বিষয় অন্তর্ভুক্ত করা উচিত। এই শর্তাবলি প্রজেক্ট পরিচালনার নিয়ম, ব্যবহারকারীর অধিকার ও দায়িত্ব, এবং প্রজেক্টের সাথে সম্পর্কিত নীতি গুলো স্পষ্টভাবে তুলে ধরবে। নিচে কিছু মূল বিষয় উল্লেখ করা হলো:</h2>
+        <div class="list">
+            <h3 class="head">১. পরিষেবার গ্রহণযোগ্যতা:</h3>
+            <ol type='i' class="lst">
+                <li> <span>ব্যবহারকারীর যোগ্যতা: </span> ব্যবহারকারীকে ১৮ বছরের ঊর্ধ্বে হতে হবে এবং শারীরিকভাবে সুস্থ থাকতে হবে।</li>
+                <li> <span>সঠিক তথ্য প্রদান:</span>  ব্যবহারকারীকে নিজের সঠিক তথ্য দিতে হবে, যেমন বয়স, রক্তের গ্রুপ, যোগাযোগের তথ্য ইত্যাদি। ভুল তথ্য প্রদানের জন্য প্রজেক্ট কর্তৃপক্ষ কোনো দায় বহন করবে না।</li>
+            </ol>
+        </div>
+        <div class="list">
+            <h3 class="head">২. রক্তদানের শর্তাবলি:</h3>
+            <ol type='i' class="lst">
+                <li> <span>স্বেচ্ছাসেবী ভিত্তিতে রক্তদান:</span> রক্তদাতা স্বেচ্ছায় এবং বিনামূল্যে রক্তদান করবেন।</li>
+                <li> <span>রক্তের মান পরীক্ষা: </span>রক্তদানের আগে ব্যবহারকারীর স্বাস্থ্য পরীক্ষা করা হবে, এবং যদি কোনো স্বাস্থ্যগত সমস্যা থাকে, রক্তদান বাতিল হতে পারে।</li>
+                <li> <span>ব্যবহারকারীর সম্মতি:</span> রক্তদানের সময় স্বাস্থ্য সংক্রান্ত যে কোনো পরীক্ষা বা তথ্য সংরক্ষণ করার জন্য ব্যবহারকারীর সম্মতি প্রয়োজন হবে।</li>
+            </ol>
+        </div>
+        <div class="list">
+            <h3 class="head">৩. তথ্য সংগ্রহ এবং গোপনীয়তা:</h3>
+            <ol type="i" class="lst">
+                <li> <span>ব্যক্তিগত তথ্য সংরক্ষণ: </span> ব্যবহারকারীর ব্যক্তিগত তথ্যের গোপনীয়তা সংরক্ষণ করা হবে এবং তৃতীয় পক্ষের সাথে শেয়ার করা হবে না, যদি না ব্যবহারকারীর অনুমতি থাকে।</li>
+                <li> <span>ডেটা নিরাপত্তা:</span>  তথ্যের নিরাপত্তা নিশ্চিত করতে সর্বোচ্চ নিরাপত্তামূলক পদক্ষেপ নেওয়া হবে।</li>
+            </ol>
+        </div>
+        <div class="list">
+            <h3 class="head">৪. দায়বদ্ধতা:</h3>
+            <ol type='i' class="lst">
+                <li> <span>প্রজেক্টের দায়িত্ব:</span>  রক্তদান প্রজেক্ট শুধুমাত্র প্ল্যাটফর্ম হিসেবে কাজ করবে এবং রক্তদাতা ও গ্রহীতার মধ্যে সংযোগ ঘটাবে। প্রজেক্ট কোনো চিকিৎসা পরামর্শ বা সেবা প্রদান করবে না।</li>
+                <li> <span>তৃতীয় পক্ষের লিঙ্ক:</span>  প্ল্যাটফর্মে তৃতীয় পক্ষের লিঙ্ক থাকতে পারে, তবে প্রজেক্ট ওই সেবা বা লিঙ্কের উপর কোনো নিয়ন্ত্রণ রাখবে না এবং দায়িত্ব নেবে না।</li>
+            </ol>
+        </div>
+        <div class="list">
+            <h3 class="head">৫. পরিষেবা ব্যবহার সীমাবদ্ধতা:</h3>
+            <ol type='i' class="lst">
+                <li> <span>অবৈধ ব্যবহার:</span>  ব্যবহারকারীরা কোনো অবৈধ উদ্দেশ্যে বা প্রজেক্টের ক্ষতি করার উদ্দেশ্যে প্ল্যাটফর্মটি ব্যবহার করতে পারবেন না।</li>
+                <li> <span>পরিষেবার পরিবর্তন:</span>  কর্তৃপক্ষ যে কোনো সময় প্রজেক্টের পরিষেবা বা শর্তাবলিতে পরিবর্তন আনতে পারে।</li>
+            </ol>
+        </div>
+        <div class="list">
+            <h3 class="head">৬. শর্তাবলি পরিবর্তন:</h3>
+            <ol type='i' class="lst">
+                <li> <span>আপডেট:</span>  Terms of Service সময়ে সময়ে পরিবর্তিত হতে পারে, এবং ব্যবহারকারীদের নিয়মিতভাবে শর্তাবলি পর্যালোচনা করার জন্য উৎসাহিত করা হবে।</li>
+            </ol>
+        </div>
+        <div class="list">
+            <h3 class="head">৭. যোগাযোগ:</h3>
+            <ol type='i' class="lst">
+                <li> <span>সহায়তা ও অভিযোগ:</span>  কোনো প্রশ্ন বা অভিযোগের জন্য ব্যবহারকারীরা সরাসরি নির্দিষ্ট ইমেল বা ফোন নম্বরে যোগাযোগ করতে পারবেন।</li>
+            </ol>
+    </div>
+    <h4>এই শর্তাবলিগুলি ব্যবহারকারীদের এবং প্রজেক্ট পরিচালকদের উভয়ের জন্যই পরিষ্কার নিয়মাবলী তৈরি করতে সহায়ক হবে।</h4>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <ul class="list">
+                    <li><a href="tel:+8801859920189"><i class="fa-solid fa-phone" class="con"></i> 01859920189</a></li>
+                    <li><a href="https://mail.google.com/mail/u/0/?ogbl#inbox?compose=CllgCJlDTMJQbPdcRDRxnkCfwZzjLztKNcnMLtqLqPrfMNXNBZfmtKmgGlTjvKNgJCrzsVClqcL"><i class="fa-solid fa-envelope"></i> sahadatfahim999@gmail.com</a></li>
+                    <li><a href="https://nstu.edu.bd/"><i class="fa-solid fa-location-dot"></i> NSTU</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/profile.php?id=100010935364988"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://wa.me/qr/ENMANXS2WFMXM1"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/sahadat-hossain-015734225"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://t.me/sahadatnstu"><i class="fa-brands fa-telegram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="termsofservice">
+            <a href="term_service.html">Terms of Service</a>
+            <br>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        </div>
+        <div class="bottom-bar">
+            &copy, copyright@2025 by <span>Sahadat Hossain & Nishad Ahmed</span> <br>| all rights reserved!
+        </div>
+    </footer>
+    <script src="../Javascript/Home.js"></script>
+    <script src="../Javascript/script.js"></script>
+</body>
+
+
+</html>

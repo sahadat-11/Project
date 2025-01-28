@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division, District, Upazila</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 300px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Division, District, Upazila</h1>
+        <select id="divisionSelect">
+            <option value="">Select Division</option>
+        </select>
+        <select id="districtSelect" disabled>
+            <option value="">Select District</option>
+        </select>
+        <select id="upazilaSelect" disabled>
+            <option value="">Select Upazila</option>
+        </select>
+    </div>
+
+    <script>
+        const divisionSelect = document.getElementById('divisionSelect');
+        const districtSelect = document.getElementById('districtSelect');
+        const upazilaSelect = document.getElementById('upazilaSelect');
+
+        // Load divisions
+        fetch('/divisions')
+            .then(response => response.json())
+            .then(divisions => {
+                divisions.forEach(division => {
+                    const option = document.createElement('option');
+                    option.value = division;
+                    option.textContent = division;
+                    divisionSelect.appendChild(option);
+                });
+            });
+
+        // Load districts based on selected division
+        divisionSelect.addEventListener('change', () => {
+            districtSelect.innerHTML = '<option value="">Select District</option>';
+            upazilaSelect.innerHTML = '<option value="">Select Upazila</option>';
+            districtSelect.disabled = true;
+            upazilaSelect.disabled = true;
+
+            const division = divisionSelect.value;
+            if (division) {
+                fetch(`/districts/${division}`)
+                    .then(response => response.json())
+                    .then(districts => {
+                        districts.forEach(district => {
+                            const option = document.createElement('option');
+                            option.value = district;
+                            option.textContent = district;
+                            districtSelect.appendChild(option);
+                        });
+                        districtSelect.disabled = false;
+                    });
+            }
+        });
+
+        // Load upazilas based on selected district
+        districtSelect.addEventListener('change', () => {
+            upazilaSelect.innerHTML = '<option value="">Select Upazila</option>';
+            upazilaSelect.disabled = true;
+
+            const division = divisionSelect.value;
+            const district = districtSelect.value;
+            if (district) {
+                fetch(`/upazilas/${division}/${district}`)
+                    .then(response => response.json())
+                    .then(upazilas => {
+                        upazilas.forEach(upazila => {
+                            const option = document.createElement('option');
+                            option.value = upazila;
+                            option.textContent = upazila;
+                            upazilaSelect.appendChild(option);
+                        });
+                        upazilaSelect.disabled = false;
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.bold{
+    font-size: 23px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    color: #30336b;
+}
+.last{
+    color: #c7ecee;
+}
+.last2{
+    font-size: large;
+}

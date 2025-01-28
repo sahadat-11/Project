@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh Location Selection Form</title>
+</head>
+<body>
+    <h2>Bangladesh Location Selection Form</h2>
+    <form action="#" method="post">
+        <label for="division">Division*</label>
+        <select id="division" name="division" required onchange="populateDistricts()">
+            <option value="" disabled selected>Select Division</option>
+            <option value="Dhaka">Dhaka</option>
+            <option value="Chattogram">Chattogram</option>
+            <option value="Rajshahi">Rajshahi</option>
+            <option value="Khulna">Khulna</option>
+            <option value="Sylhet">Sylhet</option>
+            <option value="Barishal">Barishal</option>
+            <option value="Rangpur">Rangpur</option>
+            <option value="Mymensingh">Mymensingh</option>
+        </select>
+        <br><br>
+
+        <label for="district">District*</label>
+        <select id="district" name="district" required onchange="populateThanas()">
+            <option value="" disabled selected>Select District</option>
+            <!-- Districts will be populated dynamically -->
+        </select>
+        <br><br>
+
+        <label for="thana">Upazila (Thana)*</label>
+        <select id="thana" name="thana" required>
+            <option value="" disabled selected>Select Upazila</option>
+            <!-- Upazilas (Thanas) will be populated dynamically -->
+        </select>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script src="../Javascript/search.js"></script>
+</body>
+</html>

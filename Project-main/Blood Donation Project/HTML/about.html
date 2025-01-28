@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Blood Donate Management System">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML, CSS, JavaScript , Mysql">
+    <meta name="author" content="Sahadat Hossain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> About </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../CSS/profile.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="../CSS/about.css">
+</head>
+
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="Home.html" class="logo">BloodFusion</a>
+
+            <button type class="fas fa-search" name="search_box" id="search-blood-menu" onclick="handleSearchBlood()">Search</button>
+            
+            <a href="Login.html"><button id="login-menu"> login</button></a>
+            <button id="logout-menu" onclick="handleLogout()"> logout</button>
+
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <!-- <div id="toggle-btn" class="fas fa-sun"></div> -->
+                <div id="menu-btn" class="fas fa-bars"></div>
+            </div>
+
+            <div class="profile" id="header-profile">
+                <img src="../Images/Pic-1.png" alt="">
+                <!-- need to add database -->
+                <h3>Username</h3>
+                <a href="Profile.html" class="btn">Viewprofile</a>
+
+                <div class="flex-btn">
+                    <a href="Login.html" class="option-btn">Login</a>
+                    <a href="Register.html" class="delete-btn">Register</a>
+                </div>
+            </div>
+
+
+        </section>
+
+    </header>
+    <!-- sidebar -->
+    <div class="sidebar">
+
+        <div class="close-sidebar">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="profile" id="sidebar-profile">
+            <img src="../Images/Pic-1.png" alt="">
+            <!-- need to add database -->
+            <h3>Username</h3>
+            
+            <a href="Profile.html" class="btn">Viewprofile</a>
+        </div>
+        <nav class="navbar">
+            <a href="Home.html"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="about.html"><i class="fas fa-question"></i><span>About Us</span></a>
+            <a href="contact.html"><i class="fas fa-headset"></i><span>Contact Us</span></a> -->
+        </nav>
+    </div>
+
+    <!-- sidebar end -->
+
+    <!-- about section er shuru  -->
+    <section class="about">
+        <div class="row">
+            <div class="image">
+                <img src="../Images/donate.jpg" alt=''>
+            </div>
+            <div class="content">
+                <h1>আমাদের লক্ষ্য ও উদ্দেশ্য</h1>
+                <p>BloodFusion হলো একটি সমাজসেবামূলক উদ্যোগ, যার লক্ষ্য হলো রক্তদান সম্পর্কিত সচেতনতা বৃদ্ধি করা এবং রক্তের অভাবে আক্রান্ত রোগীদের সাহায্য করা। আমাদের প্রজেক্ট বিভিন্ন সম্প্রদায়ে রক্তদাতাদের সংযুক্ত করে এবং স্বাস্থ্যসেবা প্রতিষ্ঠানের সঙ্গে সহযোগিতার মাধ্যমে প্রয়োজনীয় রক্তের সরবরাহ নিশ্চিত করে। আমরা মনে করি, একটি রক্তদান জীবন রক্ষা করতে পারে এবং আমরা এটার মাধ্যমে সমাজে ইতিবাচক পরিবর্তন আনতে চাই।</p>
+                <h1>কেন আমাদের বেছে নিবেন</h1>
+                <p><span class="bold">দ্রুত যোগাযোগ:</span> আমাদের প্ল্যাটফর্মের মাধ্যমে, আপনি খুব সহজে রক্তদাতাদের সাথে যোগাযোগ করতে পারবেন। আমাদের দ্রুত সার্চ ফিচার আপনাকে প্রয়োজনীয় রক্তের গ্রুপের জন্য স্থানীয় দাতাদের খুঁজে পেতে সহায়তা করবে।<br><br>
+
+                <span class="bold">বিশ্বাসযোগ্যতা:</span> আমরা রক্তদাতাদের নিবন্ধন এবং যাচাই প্রক্রিয়ায় উচ্চ মানের মানদণ্ড অনুসরণ করি, যাতে রোগীরা সর্বদা নিরাপদ এবং স্বাস্থ্যকর রক্ত পান।<br><br>
+                
+                <span class="bold">সচেতনতা বৃদ্ধি:</span> আমরা বিভিন্ন কর্মশালা এবং ক্যাম্পেইনের মাধ্যমে রক্তদানের গুরুত্ব সম্পর্কে সচেতনতা বৃদ্ধি করি, যাতে আমাদের সমাজে রক্তদান একটি নিয়মিত প্রক্রিয়া হয়ে ওঠে।<br><br>
+                
+                <span class="bold">সমাজসেবা:</span> রক্তবন্ধু প্রকল্পের মাধ্যমে আপনি শুধুমাত্র রক্তদান করেন না, বরং সমাজের মানুষের জীবনে একটি ইতিবাচক পরিবর্তন আনতে সহায়তা করেন।
+                <br><br>
+                <span class="bold">অভিজ্ঞ টিম:</span> আমাদের টিম comprises স্বাস্থ্য বিশেষজ্ঞ এবং স্বেচ্ছাসেবকদের যারা রক্তদান সম্পর্কিত সব তথ্য এবং সহায়তা প্রদান করে।</p>
+                <p class="last">BloodFusion প্রজেক্টের মাধ্যমে আসুন আমরা সবাই মিলে জীবনের জন্য একটি নতুন আশার আলো সৃষ্টি করি।</p>
+                <p class="last2">সমাপ্তি: আপনারা যদি এই বিষয়ে আরও কোনও তথ্য বা বিষয়বস্তু চান, তাহলে জানাবেন!</p>
+            </div>
+        </div>
+
+    </section>
+    <!-- about section er shesh -->
+
+    <!-- footer section shuru -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <ul class="list">
+                    <li><a href="tel:+8801859920189"><i class="fa-solid fa-phone" class="con"></i> 01859920189</a></li>
+                    <li><a href="https://mail.google.com/mail/u/0/?ogbl#inbox?compose=CllgCJlDTMJQbPdcRDRxnkCfwZzjLztKNcnMLtqLqPrfMNXNBZfmtKmgGlTjvKNgJCrzsVClqcL"><i class="fa-solid fa-envelope"></i> sahadatfahim999@gmail.com</a></li>
+                    <li><a href="https://nstu.edu.bd/"><i class="fa-solid fa-location-dot"></i> NSTU</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/profile.php?id=100010935364988"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://wa.me/qr/ENMANXS2WFMXM1"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/sahadat-hossain-015734225"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://t.me/sahadatnstu"><i class="fa-brands fa-telegram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="termsofservice">
+            <a href="term_service.html">Terms of Service</a>
+            <br>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        </div>
+        <div class="bottom-bar">
+            &copy, copyright@2025 by <span>Sahadat Hossain & Nishad Ahmed</span> <br>| all rights reserved!
+        </div>
+    </footer>
+    <script src="../Javascript/Home.js"></script>
+    <script src="../Javascript/script.js"></script>
+</body>
+
+
+</html>
