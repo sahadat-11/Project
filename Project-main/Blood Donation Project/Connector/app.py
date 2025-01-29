@@ -124,32 +124,12 @@ def update_user(id):
     return make_response({"message": "No fields to update."}, 400)
 
 
-
-
-@app.route("/contact", methods=["POST"])
-def save_contact():
-    data = request.form
-    name = data.get('name')
-    email = data.get('email')
-    number = data.get('number')
-    message = data.get('msg')
-    
-    if not name or not email or not number or not message:
-        return make_response({"error": "All fields are required."}, 400)
-    
-    try:
-        query = "INSERT INTO contacts (name, email, number, message) VALUES (%s, %s, %s, %s)"
-        connector.cursor.execute(query, (name, email, number, message))
-        connector.connection.commit()
-        return make_response({"message": "Message sent successfully."}, 200)
-    except Exception as e:
-        return make_response({"error": f"Database error: {e}"}, 500)
-
-
-
 @app.route("/delete-student/<int:id>",methods=["DELETE"])
 def delete_student(id):
     return (d_user(connector,id))
+
+
+
 
 
     

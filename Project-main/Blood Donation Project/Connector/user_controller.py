@@ -22,18 +22,23 @@ def get_donors(cursor):
         }
         return data
 
-def add_user(connector,data):
+def add_user(connector, data):
     print(data)
-    curso=connector.cursor
-    query=add_query(data=data,table="users")
+
+    # Remove `con_pass` before inserting into the database
+    data.pop("con_pass", None)
+
+    cursor = connector.cursor
+    query = add_query(data=data, table="users")
     print(query)
     try:
-        curso.execute(query)
+        cursor.execute(query)
         connector.connection.commit()
-        return make_response({'message':"Successfull"},201)
+        return make_response({'message': "User added successfully"}, 201)
     except Exception as e:
         print(e)
-        return make_response({'message':f'{e}'},400)
+        return make_response({'error': f'{e}'}, 400)
+
 
 def search_donor(connector, data):
     print(data)

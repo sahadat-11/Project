@@ -216,25 +216,42 @@ document.getElementById("mobile_number").addEventListener("input", function () {
 
 
 
-const my_form = document.getElementById("register-form")
-console.log("register page")
-my_form.addEventListener('submit', function(event){
-    event.preventDefault()
-    const form = event.target
-    const payload = new FormData(form)
-    console.log(payload)
-    fetch_api(payload)
-})
+const my_form = document.getElementById("register-form");
+console.log("register page");
 
+my_form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
+    const password = document.querySelector('input[name="password"]').value;
+    const confirmPassword = document.querySelector('input[name="con_pass"]').value;
 
-const fetch_api= async (payload)=>{
-    const res=await fetch("http://127.0.0.1:5000/add-user", {
-        method: "POST",
-        body: payload
-    })
-    const data=await res.json()
-    console.log(data)
-    alert("Sign Up Successfully");
-}
+    if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return; // Stop form submission
+    }
 
+    const form = event.target;
+    const payload = new FormData(form);
+    console.log(payload);
+    fetch_api(payload);
+});
+
+const fetch_api = async (payload) => {
+    try {
+        const res = await fetch("http://127.0.0.1:5000/add-user", {
+            method: "POST",
+            body: payload
+        });
+
+        const data = await res.json();
+        if (!res.ok) {
+            throw new Error(data.error || "Failed to register");
+        }
+
+        console.log(data);
+        alert("Sign Up Successfully");
+    } catch (error) {
+        alert(`Error: ${error.message}`);
+        console.error(error);
+    }
+};
