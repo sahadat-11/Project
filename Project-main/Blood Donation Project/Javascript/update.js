@@ -221,47 +221,53 @@ const locationData = {
 
 
 document.getElementById("update-form").addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const formData = new FormData();
-    
-  
-    // Collect input values
-    Array.from(form.elements).forEach((input) => {
-      if (input.name && input.value.trim() !== "") {
-        formData.append(input.name, input.value);
-      }
-    });
-  
-    const imageInput = form.querySelector('input[type="file"]');
-    if (imageInput && imageInput.files.length > 0) {
-      formData.append(imageInput.name, imageInput.files[0]);
-    }
-  
-    try {
-      const res = await fetch(`http://127.0.0.1:5000/update-user/${localStorage.getItem("id")}`, {
-        method: "PUT",
-        body: formData,
+  event.preventDefault();
+
+  const form = event.target;
+  const formData = new FormData(form);
+
+  // Ensure the current password is provided
+  const password = form.querySelector('input[name="password"]').value.trim();
+  if (!password) {
+      alert("Current password must be given.");
+      return;
+  }
+
+  const userId = localStorage.getItem("id");
+  if (!userId) {
+      alert("User ID not found. Please log in again.");
+      return;
+  }
+
+  try {
+      const res = await fetch(`http://127.0.0.1:5000/update-user/${userId}`, {
+          method: "PUT",
+          body: formData,
+          cache: "no-cache",
       });
-  
+
       const data = await res.json();
-  
+
       if (!res.ok) {
-        alert(data.error || "Failed to update the profile. Please try again.");
-        return;
+          if (data.error.includes("Your old password is incorrect")) {
+              alert("Incorrect current password. Please try again.");
+          } else {
+              alert(data.error || "Failed to update profile.");
+          }
+          return;
       }
-  
-      // Update localStorage
+
+      // Update local storage if successful
       if (data.data.image) localStorage.setItem("image", data.data.image);
       if (data.data.name) localStorage.setItem("name", data.data.name);
-  
+
       alert("Profile updated successfully!");
-      window.location.href = "../HTML/home.html";
-    } catch (error) {
+      window.location.href = "../HTML/Home.html";
+  } catch (error) {
       console.error("Error:", error);
       alert("Something went wrong. Please try again.");
-    }
-  });
+  }
+});
   
 
 const fetch_api = async payload => {

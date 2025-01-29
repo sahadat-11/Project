@@ -66,7 +66,6 @@ def update_user(id):
     data = request.form
     image = request.files.get('image')
 
-    
     if not data.get('password') or not data['password'].strip():
         return make_response({"error": "Old password is required to update any information."}, 400)
 
@@ -79,14 +78,13 @@ def update_user(id):
     except Exception as e:
         return make_response({"error": f"Database error: {e}"}, 500)
 
-    
     update_fields = {}
 
-    
     if data.get('new_pass') and data['new_pass'].strip():
+        if data.get('con_pass') != data['new_pass']:
+            return make_response({"error": "New password and confirm password do not match."}, 400)
         update_fields['password'] = data['new_pass']
 
-   
     if data.get('division') and data['division'].strip():
         if not (data.get('district') and data.get('upazila')):
             return make_response({"error": "Division, district, and upazila must all be provided if updating division."}, 400)
@@ -96,12 +94,10 @@ def update_user(id):
             "upazila": data['upazila']
         })
 
-  
     for key in ['name', 'mobile_number', 'last_donate']:
         if key in data and data[key].strip():
             update_fields[key] = data[key]
 
-    
     if image and image.filename.strip():
         try:
             file_location = upload_file(data=image)
@@ -109,7 +105,6 @@ def update_user(id):
         except Exception as e:
             return make_response({"error": f"Image upload failed: {e}"}, 500)
 
-    
     if update_fields:
         try:
             query = "UPDATE users SET " + ", ".join(f"{key}='{value}'" for key, value in update_fields.items()) + f" WHERE id={id}"
@@ -124,14 +119,78 @@ def update_user(id):
     return make_response({"message": "No fields to update."}, 400)
 
 
+
 @app.route("/delete-student/<int:id>",methods=["DELETE"])
 def delete_student(id):
     return (d_user(connector,id))
 
 
 
+@app.route("/change-password/<int:id>", methods=["POST"])
+def change_password(id):
+    data = request.form
+
+    # Validate required fields
+    if not data.get("password") or not data.get("new_pass"):
+        return make_response({"error": "Current password and new password are required."}, 400)
+
+    try:
+        # Check if the current password matches the user's password in the database
+        query = f"SELECT * FROM users WHERE id = {id} AND password = '{data['password']}'"
+        connector.cursor.execute(query)
+        user = connector.cursor.fetchone()
+
+        if not user:
+            return make_response({"error": "Current password is incorrect."}, 400)
+
+        # Update password
+        query = f"UPDATE users SET password = '{data['new_pass']}' WHERE id = {id}"
+        connector.cursor.execute(query)
+        connector.connection.commit()
+
+        return make_response({"message": "Password changed successfully."}, 200)
+
+    except Exception as e:
+        return make_response({"error": f"Database error: {e}"}, 500)
+    
 
 
+import re
+
+@app.route("/submit-contact", methods=["POST"])
+def submit_contact():
+    data = request.form
+
+    if not all(key in data and data[key].strip() for key in ["name", "email", "mobile_number", "message"]):
+        return make_response({"error": "All fields are required."}, 400)
+
+    mobile_number = data["mobile_number"]
+
+    # Check if the number starts with "01"
+    if not mobile_number.startswith("01"):
+        return make_response({"error": "Mobile number must start with '01'."}, 400)
+
+    # Check if the number has exactly 11 digits
+    if not re.fullmatch(r"01\d{9}", mobile_number):
+        return make_response({"error": "Mobile number must be exactly 11 digits."}, 400)
+
+    try:
+        query = """
+        INSERT INTO contact_messages (name, email, mobile_number, message)
+        VALUES (%s, %s, %s, %s)
+        """
+        values = (data["name"], data["email"], mobile_number, data["message"])
+
+        cursor = connector.cursor
+        cursor.execute(query, values)
+        connector.connection.commit()
+
+        return make_response({"message": "Message sent successfully!"}, 201)
+    except Exception as e:
+        return make_response({"error": f"Database error: {e}"}, 500)
+
+
+ 
     
 
 if __name__=="__main__":

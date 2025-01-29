@@ -201,18 +201,34 @@ function populateupazilas() {
 document.getElementById("mobile_number").addEventListener("input", function () {
     const mobileField = document.getElementById("mobile_number");
     const errorField = document.getElementById("mobile_error");
+    const mobileValue = mobileField.value;
 
-    // Allow only numeric input
-    const regex = /^[0-9]*$/;
-
-    if (!regex.test(mobileField.value)) {
-        // Show error message if input contains anything other than numbers
+    // Validate: Mobile number must start with "01"
+    if (!mobileValue.startsWith("01")) {
+        errorField.textContent = "Mobile number must start with '01'.";
         errorField.style.display = "block";
-    } else {
-        // Hide error message if input is valid
-        errorField.style.display = "none";
+        return;
     }
+
+    // Validate: Mobile number must be exactly 11 digits
+    if (mobileValue.length !== 11) {
+        errorField.textContent = "Mobile number must be exactly 11 digits.";
+        errorField.style.display = "block";
+        return;
+    }
+
+    // Validate: Allow only numeric input
+    const regex = /^[0-9]*$/;
+    if (!regex.test(mobileValue)) {
+        errorField.textContent = "Only numbers (0-9) are allowed.";
+        errorField.style.display = "block";
+        return;
+    }
+
+    // If all conditions are satisfied, hide the error message
+    errorField.style.display = "none";
 });
+
 
 
 
