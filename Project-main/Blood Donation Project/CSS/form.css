@@ -1,0 +1,90 @@
+.form-container{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh -20rem);
+    margin-top: 5rem;
+}
+.form-container form{
+    background-color: #43afb9;
+    border-radius: 0.5rem;
+    padding :2rem;
+    width: 95rem;
+}
+ 
+.form-container form p{
+   padding-top: 1rem;
+   font-size: 1.7rem;
+   font-weight: bolder;
+   color: var(--black);
+} 
+
+.form-container form h3{
+    text-align:center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color:var(--black);
+ } 
+
+.form-container form p span{
+    color:var(--red);
+}
+
+.form-container form .box{ 
+    width:100%;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    color:black;
+    padding:1.4rem;
+    background-color: white;      
+    /* change korte hobe */
+}
+.form-container form .inline-btn{
+   margin-left: 39rem;
+   
+}
+.form-container form .Account p{
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1.4rem;
+   
+}
+
+.form-container form h3{
+    color: rgb(0, 0, 0);
+    font-size: 3rem ;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+.form-container form{
+    background-color: #bebebe
+    /* border: 3px solid var(--black); */
+}
+
+.form-container form .box{
+   background-color:var(--light-bg);
+   color: var(--black);
+   font-weight: 500;
+   resize: none;
+   /* border: .1px solid var(--black); */
+}
+
+
+.forgot-password {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}

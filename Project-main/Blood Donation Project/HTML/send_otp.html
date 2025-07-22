@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email OTP Verification</title>
+    <link rel="stylesheet" href="../CSS/send_otp.css">
+</head>
+<body>
+    <div class="container">
+
+        <h2>Email OTP Verification System</h2>
+        <label for="email">Your Email (OTP Receiver)</label>
+        <input type="email" id="email" placeholder="Enter your email">
+        <button class="send-otp" onclick="sendOTP()">Send OTP</button>
+        
+        <label for="otp">Enter OTP Here</label>
+        <input type="text" id="otp" placeholder="Enter OTP">
+        <button class="verify-otp" onclick="verifyOTP()">Verify OTP</button>
+        
+        <div class="status">OTP Status</div>
+    </div>
+    <script src="../Javascript/send_otp.js"></script>
+</body>
+</html>

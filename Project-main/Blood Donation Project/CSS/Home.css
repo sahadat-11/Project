@@ -1,0 +1,160 @@
+#first{
+  text-align: center;
+  color: #38ada9;
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+.hd{
+  padding-left: 10px;
+  color: #4d5656;
+  font-size: 18px;
+}
+.tips{
+  text-align: center;
+}
+p{
+  font-size: medium;
+  color: #30336b;
+}
+  
+#author{
+  font-size: 40px;
+  padding-top: 50px;
+  color:#34ace0;
+}
+
+#search-blood-menu{
+  height: 60px;
+  width: 130px;
+  background-color: #1abc9c;
+  font-size: 15px;
+}
+#search-blood-menu:hover, #login-menu:hover{
+  color:  #ffffff;
+}
+#login-menu, #logout-menu, #request-menu, #show_request-menu{
+  height: 50px;
+  width: 120px;
+  font-size: 25px;
+  background-color: #1abc9c;
+}
+#search-blood-menu:hover, #logout-menu:hover, #login-menu:hover, #request-menu:hover, #show_request-menu:hover{
+  color:  #ffffff;
+}
+.donate{
+  text-decoration: double;
+  padding-top: 30px;
+  color: #00d8d6;
+  padding-left: 20px;
+}
+
+.nitimala{
+  text-decoration: double;
+  padding-top: 30px;
+  color: #05c46b;
+  padding-left: 20px;
+}
+
+.img{
+  width: 100%;
+  
+}
+.upokar{
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.sc{
+  color: #0fbcf9;
+  padding-bottom: 20px;
+}
+.sm{
+  font-size: 20px;
+  color: #117864;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.smc{
+  color: #34495e;
+}
+
+footer{
+  padding-top: 30px
+}
+
+/* #col-md-4-my-41{
+  border-left: 30px;
+} */
+
+
+.row {
+  margin: 0 auto; /* Centers the row */
+  max-width: 1200px; /* Optional: Constrain the row's width */
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for distinction */
+  border-radius: 8px; /* Rounded corners for the cards */
+}
+
+.card img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.col-md-4 {
+  margin-left: auto;
+  margin-right: 24px;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+  border-top: 1px solid #dee2e6;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.table-container {
+  max-width: 90%; /* Adjusted width for a closer-left alignment */
+  margin: 0;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  padding: 15px; /* Increased padding for better readability */
+  border: 1px solid #ddd;
+  font-size: 18px; /* Larger font size for content */
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+td {
+  background-color: #f4f4f4;
+}

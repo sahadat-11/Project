@@ -1,0 +1,30 @@
+.first{
+    color: #130f40;
+    font-size: 20px;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+}
+.list{
+    padding-top: 20px;
+    padding-left: 100px;;
+    font-size: 18px;
+}
+.head{
+    color: #28b463;
+    font-size: 20px;
+}
+.lst{
+  font-size: medium;
+  list-style-type: circle;
+}
+ol{
+    list-style: circle;
+}
+span{
+    font-size: medium;
+    color: #4a69bd;
+}
+h2{
+    font-size: 20px;
+}
